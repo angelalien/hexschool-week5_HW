@@ -1,0 +1,704 @@
+@charset "UTF-8";
+/*css reset*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/*body*/
+body {
+  font-family: PingFang TC,微軟正黑體;
+}
+
+.container {
+  max-width: 940px;
+  margin: 0 auto;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/*nav*/
+nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 30px auto;
+}
+
+nav ul {
+  width: 215px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+nav ul li:hover {
+  text-decoration: underline;
+}
+
+.burgerMenu {
+  width: 24px;
+  height: 24px;
+  display: none;
+  background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/student-week1/dehaze-24px.png");
+}
+
+.navLogo {
+  width: 220px;
+  height: 40px;
+  background-image: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/student-week1/logo-all-dark.svg);
+  background-repeat: no-repeat;
+  display: block;
+}
+
+.navMenu {
+  width: 34%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.navMenu .navTxt {
+  max-height: 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.navMenu .active {
+  max-height: 200px;
+}
+
+.navTxt a, .menu a {
+  color: #3F5D45;
+  font-weight: 800;
+  text-decoration: none;
+  padding: 10px;
+}
+
+/*footer*/
+.subscribe {
+  background: #3F5D45;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 30px 0px;
+}
+
+.subscribe .innerSubscribe {
+  width: 76%;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.logoTxt {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: 124px;
+}
+
+.logoTxt .logo {
+  width: 40px;
+  height: 40px;
+  margin-right: 20px;
+}
+
+.logoTxt h2 {
+  font-size: 24px;
+  color: #EAF0ED;
+}
+
+form {
+  width: 380px;
+  height: 56px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+form label {
+  width: 64px;
+  background: #EAF0ED;
+  padding: 16px 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+form label:hover {
+  cursor: pointer;
+}
+
+form .inputTxt {
+  width: 252px;
+  height: 56px;
+  background: #EAF0ED;
+  border: 0px;
+  padding: 0px;
+}
+
+form .inputBtn {
+  width: 64px;
+  background: #FFE180;
+  height: 56px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 16px 20px;
+}
+
+.information {
+  color: #3F5D45;
+  background: #EAF0ED;
+}
+
+.information .infor {
+  width: 76%;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 30px 0px;
+}
+
+.information .contact {
+  width: 76%;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.information h2 {
+  -webkit-writing-mode: vertical-rl;
+      -ms-writing-mode: tb-rl;
+          writing-mode: vertical-rl;
+  font-size: 23px;
+  letter-spacing: 3px;
+  line-height: 1.5em;
+}
+
+.detail {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.detail img {
+  width: 171.22px;
+  height: 26.6px;
+  margin-bottom: 39.5px;
+}
+
+.detail p {
+  line-height: 1.5em;
+}
+
+.contact {
+  width: 76%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  padding-bottom: 30px;
+}
+
+.contact .icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.contact .icon img {
+  width: 32px;
+  padding-right: 8px;
+}
+
+/*----------for pad----------*/
+@media (max-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+  /*nav*/
+  .burgerMenu {
+    display: block;
+  }
+  .navLogo {
+    width: 114px;
+    height: 18px;
+    background-image: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/student-week1/logotype-sm-dark.svg);
+  }
+  .navMenu {
+    width: 24px;
+  }
+  .navMenu .navTxt {
+    width: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    position: absolute;
+    top: 84px;
+    left: 0px;
+    text-align: center;
+    line-height: 2.5em;
+    background: #fff;
+    -webkit-transition: all 0.8s;
+    transition: all 0.8s;
+    overflow: hidden;
+  }
+  .navMenu .navTxt li {
+    width: 100%;
+  }
+  /*footer*/
+  .innerSubscribe {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .innerSubscribe .logoTxt {
+    margin: 0px 0px 30px;
+  }
+  form {
+    width: 315px;
+  }
+  form .inputTxt {
+    width: 187px;
+  }
+  .contact {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .contact .icon {
+    margin-bottom: 23px;
+  }
+  .contact p {
+    font-size: 14px;
+  }
+}
+
+/*----------for phone----------*/
+@media (max-width: 414px) {
+  .container {
+    max-width: 414px;
+  }
+  .logoTxt h2 {
+    font-size: 22px;
+  }
+  .information h2 {
+    display: none;
+  }
+  .information .infor {
+    height: 138px;
+  }
+}
+
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/materialicons/v55/flUhRq6tzZclQEJ-Vdg-IuiaDsNc.woff2) format("woff2");
+}
+
+/*banner*/
+.resultbanner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 460px;
+  background-image: url(https://bit.ly/2P7GhNd);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-bottom: 60px;
+  text-align: center;
+}
+
+.resultbanner .check {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  margin-bottom: 32px;
+}
+
+.resultbanner .check .checkCircle {
+  font-family: 'Material Icons';
+  font-size: 24px;
+  color: #3F5D45;
+}
+
+.resultbanner .check .line {
+  border-top: 1px solid #3F5D45;
+  width: 66px;
+}
+
+.resultbanner .success {
+  display: block;
+  width: 189px;
+  height: 45px;
+  margin-bottom: 51px;
+}
+
+.resultbanner .back {
+  background: #FFE180;
+  font-size: 24px;
+  font-weight: 800;
+}
+
+.resultbanner .back a {
+  color: #3F5D45;
+  background: #FFE180;
+  text-decoration: none;
+  padding: 16px 102px;
+}
+
+/*----------for pad----------*/
+@media (max-width: 768px) {
+  .resultbanner {
+    position: relative;
+  }
+  .resultbanner .back {
+    position: absolute;
+    display: block;
+    text-align: center;
+    width: 100%;
+    padding: 20px 0px;
+    top: 460px;
+  }
+}
+
+/*banner*/
+.banner {
+  margin-bottom: 60px;
+}
+
+/*main*/
+.main {
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+/*main_menu*/
+.menu {
+  -ms-flex-preferred-size: 33%;
+      flex-basis: 33%;
+  font-size: 24px;
+  letter-spacing: 0px;
+}
+
+.menu h3 {
+  color: #fff;
+  background: #3F5D45;
+  padding: 16px 10%;
+}
+
+.menu li {
+  font-size: 23px;
+  letter-spacing: 0px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: 1px solid #EAF0ED;
+  border-top: 0px;
+}
+
+.menu li:hover {
+  background: #EAF0ED;
+}
+
+.menu a {
+  display: block;
+  margin: 0 auto;
+  padding: 16px 0px;
+}
+
+/*main_product*/
+.product {
+  -ms-flex-preferred-size: 66%;
+      flex-basis: 66%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.product li {
+  width: 300px;
+  margin: 0px auto 20px;
+  position: relative;
+}
+
+.product li .buy {
+  display: block;
+  background: #EAF0ED;
+  padding: 16px 90px;
+  color: #3F5D45;
+  text-decoration: none;
+  font-size: 24px;
+  font-weight: 1000;
+}
+
+.product li .buy:hover {
+  color: #fff;
+  background: #3F5D45;
+}
+
+.product h4 {
+  width: 36px;
+  color: #fff;
+  line-height: 1.2em;
+  background: #3F5D45;
+  padding: 10px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  position: absolute;
+  left: 20px;
+}
+
+.product .heart {
+  position: absolute;
+  left: 258px;
+  top: 20px;
+}
+
+.product img {
+  display: block;
+}
+
+.text {
+  font-size: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.text h3 {
+  width: 107px;
+  color: #3F5D45;
+  padding: 14px 33px;
+  border: 1px solid #EAF0ED;
+}
+
+.text span {
+  width: 82px;
+  padding: 14px 20px 14px 25px;
+  border: 1px solid #EAF0ED;
+  border-left: 0px;
+}
+
+/*page*/
+.page ul {
+  -ms-flex-preferred-size: 300px;
+      flex-basis: 300px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  margin-bottom: 60px;
+}
+
+.page li a {
+  width: 60px;
+  height: 60px;
+  background: #fff;
+  color: #3F5D45;
+  text-decoration: none;
+  text-align: center;
+  border: 1px solid #EAF0ED;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.page li a:hover {
+  color: #fff;
+  background: #3F5D45;
+}
+
+.page .pageNum:hover {
+  background: #EAF0ED;
+}
+
+/*----------for pad----------*/
+@media (max-width: 768px) {
+  /*banner*/
+  .banner {
+    margin: 0px;
+  }
+  /*main*/
+  .main {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .menu {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  .product, .page {
+    width: 92%;
+    margin: 0 auto;
+  }
+}
+
+/*----------for phone----------*/
+@media (max-width: 414px) {
+  .page ul {
+    width: 300px;
+    margin: 0px auto 60px;
+  }
+}
+/*# sourceMappingURL=all.css.map */

@@ -1,0 +1,273 @@
+/*body*/
+body{
+	font-family:PingFang TC,微軟正黑體;
+}
+
+.container{
+	max-width:940px;
+	margin: 0 auto;
+}
+img{
+	display: block;
+	max-width: 100%;
+}
+
+/*nav*/
+nav{
+	display: flex;
+	justify-content: space-between;
+	align-items:center;
+	margin: 30px auto;
+	ul{
+		width: 215px;		
+		display: flex;
+		justify-content: space-between;
+		li{
+			&:hover{
+				text-decoration: underline;
+			}
+		}
+	}
+} 
+
+
+.burgerMenu{
+	width: 24px;
+	height: 24px;
+	display: none;
+	background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/student-week1/dehaze-24px.png");
+}
+
+.navLogo{
+	width:220px;
+	height: 40px;	
+	background-image: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/student-week1/logo-all-dark.svg);
+	background-repeat: no-repeat;
+	display: block;
+}
+
+.navMenu{
+	width:34%;
+	display:flex;
+	justify-content: space-between;
+	flex-wrap:nowrap;
+	align-items:center;
+	.navTxt{
+		max-height: 0px;
+		display:flex;
+		justify-content: space-between;
+		flex-wrap:nowrap;
+		align-items:center;
+	}
+	.active{
+		max-height: 200px;	
+	}
+}
+
+.navTxt a, .menu a{
+	color: #3F5D45;
+	font-weight: 800;
+	text-decoration: none;
+	padding:10px;
+}
+
+
+/*footer*/
+.subscribe{
+	background: #3F5D45;
+	box-sizing: border-box;
+	padding: 30px 0px;
+	.innerSubscribe{
+		width: 76%;
+		margin: 0 auto;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;		
+	}
+}
+
+.logoTxt{
+	display: flex;
+	align-items: center;
+	margin-right: 124px;
+	.logo{
+		width: 40px;
+		height: 40px;
+		margin-right: 20px;
+	}
+	h2{
+		font-size: 24px;
+		color: #EAF0ED;		
+	}
+}
+
+form{
+	width: 380px;
+	height: 56px;	
+	display: flex;
+	label{
+		width: 64px;
+		background: #EAF0ED;
+		padding: 16px 0px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		&:hover{
+			cursor: pointer;
+		}
+	}
+	.inputTxt{
+		width: 252px;
+		height: 56px;
+		background: #EAF0ED;
+		border:0px;
+		padding: 0px;
+	}
+	.inputBtn{
+		width: 64px;
+		background: #FFE180;
+		height: 56px;
+		box-sizing: border-box;
+		padding: 16px 20px;
+	}
+}
+
+.information{
+	color:#3F5D45;
+	background: #EAF0ED;	
+	.infor{
+		width: 76%;	
+		margin: 0 auto;
+		display: flex;
+		justify-content: space-between;
+		padding:30px 0px;
+	}
+	.contact{
+		width: 76%;	
+		margin: 0 auto;
+		display: flex;
+		justify-content: space-between;
+	}
+	h2{	
+	writing-mode: vertical-rl;
+		font-size: 23px;
+		letter-spacing: 3px;
+	    line-height: 1.5em;
+	}	
+}
+
+.detail{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	img{
+		width:171.22px;
+		height: 26.6px;
+		margin-bottom: 39.5px;
+	}
+	p{		
+	    line-height: 1.5em;
+	}
+}
+
+.contact{
+	width: 76%;
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-end;
+	padding-bottom: 30px;
+	.icon{
+		display: flex;	
+		img{
+			width: 32px;
+			padding-right:8px; 
+		}
+	}
+}
+
+/*----------for pad----------*/
+@media(max-width: 768px){
+
+	.container{
+		max-width:768px;
+	}
+	
+	/*nav*/	
+	.burgerMenu{
+		display: block;
+	}
+	
+	.navLogo{
+		width:114px;
+		height: 18px;	
+		background-image: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/student-week1/logotype-sm-dark.svg);
+	}
+	
+	.navMenu{
+		width:24px;
+		.navTxt{	
+			width: 100%;
+			flex-direction: column;
+			position: absolute;
+			top:84px;
+			left:0px;
+			text-align: center;
+			line-height: 2.5em;
+			background: #fff;
+			transition: all 0.8s;
+			overflow: hidden;
+			li{
+				width: 100%;
+			}
+		}
+	}	
+	
+	/*footer*/
+	.innerSubscribe{
+		flex-direction: column;
+		justify-content: center;
+		.logoTxt{
+			margin: 0px 0px 30px;
+		}
+	}
+	
+	form{
+		width: 315px;
+		.inputTxt{	
+			width: 187px;
+		}
+	}
+	
+	.contact{
+		flex-wrap: wrap;
+		.icon{
+			margin-bottom: 23px;
+		}
+		p{
+			font-size:14px ;
+		}
+	}	
+}
+	
+/*----------for phone----------*/
+@media(max-width: 414px){
+	
+	.container{
+		max-width:414px;
+	}	
+	
+	.logoTxt{
+		h2{
+			font-size: 22px;
+		}
+	}
+	
+	.information{
+		h2{
+			display: none;
+		}
+		.infor{
+			height: 138px;
+		}
+	}	
+}

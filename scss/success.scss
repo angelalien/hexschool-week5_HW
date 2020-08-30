@@ -1,0 +1,70 @@
+@font-face {
+	font-family: 'Material Icons';
+	font-style: normal;
+	font-weight: 400;
+	src: url(https://fonts.gstatic.com/s/materialicons/v55/flUhRq6tzZclQEJ-Vdg-IuiaDsNc.woff2) format('woff2');
+}
+
+/*banner*/
+.resultbanner{
+	display: flex;
+	flex-basis: 100%;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	height: 460px;
+	background-image: url(https://bit.ly/2P7GhNd);
+	background-position:center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	margin-bottom: 60px;
+	text-align: center;
+	.check{
+		display: flex;
+		align-items: center;
+		flex-wrap: nowrap;
+		margin-bottom: 32px;
+		.checkCircle{
+			font-family: 'Material Icons';		
+			font-size: 24px;		
+			color:#3F5D45;
+		}
+		.line{
+			border-top: 1px solid #3F5D45;
+			width: 66px;
+		}
+	}
+	.success{
+		display: block;
+		width: 189px;
+		height: 45px;
+		margin-bottom: 51px;
+	}
+	.back{			
+		background: #FFE180;	
+		font-size: 24px;
+		font-weight:800;		
+		a{
+            color: #3F5D45;
+            background: #FFE180;
+            text-decoration: none;
+            padding: 16px 102px;
+		}
+	}	
+}
+
+/*----------for pad----------*/
+@media(max-width: 768px){
+	.resultbanner{
+        position: relative;   
+		.back{			
+			position: absolute;
+            display: block;	
+            text-align: center;
+            width: 100%;
+			padding: 20px 0px;	
+            top:460px;
+            
+		}
+	}
+}
